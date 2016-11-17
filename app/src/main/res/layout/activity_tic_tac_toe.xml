@@ -20,60 +20,47 @@
         android:text="Tic-Tac-Toe" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        style="@style/row">
         <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="@style/cell"
+            android:id="@+id/cell_00" />
+        <Button
+            style="@style/cell"
+            android:id="@+id/cell_10" />
 
         <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="@style/cell"
+            android:id="@+id/cell_20" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        style="@style/row">
         <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="@style/cell"
+            android:id="@+id/cell_01" />
 
         <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="@style/cell"
+            android:id="@+id/cell_11" />
 
         <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="@style/cell"
+            android:id="@+id/cell_21" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        style="@style/row">
         <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="@style/cell"
+            android:id="@+id/cell_02" />
 
         <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="@style/cell"
+            android:id="@+id/cell_12" />
 
         <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="@style/cell"
+            android:id="@+id/cell_22" />
     </LinearLayout>
 
     <Button
@@ -82,6 +69,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/game_feedback"
         android:textSize="20dp"
         android:text="Result"
         android:layout_width="wrap_content"
