@@ -59,4 +59,17 @@ public class TicTacToeActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void newGame(View view) {
+        game = new TicTacToe();
+        gameFeedback.setVisibility(View.INVISIBLE);
+        clearCells();
+    }
+
+    private void clearCells() {
+        for (Integer id: buttons.keySet()) {
+            Button button = getButtonById(id);
+            button.setText("");
+        }
+    }
 }
