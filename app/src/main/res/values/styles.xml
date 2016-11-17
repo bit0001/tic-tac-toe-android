@@ -12,6 +12,7 @@
         <item name="android:layout_width">@dimen/cell_side</item>
         <item name="android:layout_height">@dimen/cell_side</item>
         <item name="android:textSize">60dp</item>
+        <item name="android:onClick">markCell</item>
     </style>
 
     <style name="row">
