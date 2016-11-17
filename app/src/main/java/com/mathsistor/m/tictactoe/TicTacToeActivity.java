@@ -44,6 +44,18 @@ public class TicTacToeActivity extends AppCompatActivity {
         buttons.put(R.id.cell_22, new Tuple(3, 3));
     }
 
+    public void markCell(View view) {
+        Button button = (Button) view;
+
+        if (button.getText().equals("")) {
+            button.setText(String.valueOf(game.nextPlayer()));
+            Tuple tuple = buttons.get(button.getId());
+
+
+            String feedback = game.play(tuple.getX(), tuple.getY());
+            if (!feedback.equals("No winner")) {
+                gameFeedback.setText(feedback);
+                gameFeedback.setVisibility(View.VISIBLE);
             }
         }
     }
