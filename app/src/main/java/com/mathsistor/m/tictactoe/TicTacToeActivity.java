@@ -14,6 +14,7 @@ import butterknife.ButterKnife;
 
 public class TicTacToeActivity extends AppCompatActivity {
     private TicTacToe game = new TicTacToe();
+    private boolean isWinner;
 
     @BindView(R.id.game_feedback)
     TextView gameFeedback;
@@ -45,6 +46,10 @@ public class TicTacToeActivity extends AppCompatActivity {
     }
 
     public void markCell(View view) {
+        if (isWinner) {
+            return;
+        }
+
         Button button = (Button) view;
 
         if (button.getText().equals("")) {
@@ -56,11 +61,15 @@ public class TicTacToeActivity extends AppCompatActivity {
             if (!feedback.equals("No winner")) {
                 gameFeedback.setText(feedback);
                 gameFeedback.setVisibility(View.VISIBLE);
+                if (feedback.contains("the winner")) {
+                    isWinner = true;
+                }
             }
         }
     }
 
     public void newGame(View view) {
+        isWinner = false;
         game = new TicTacToe();
         gameFeedback.setVisibility(View.INVISIBLE);
         clearCells();
